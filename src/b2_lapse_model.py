@@ -241,9 +241,8 @@ print(
     "%"
 )
 
-# Save the cohort and labels.
 features.to_csv(
-    OUTPUT_DIR / "customer_segments.csv",
+    OUTPUT_DIR / "b2_customer_features.csv",
     index=False
 )
 
@@ -584,6 +583,10 @@ check(
 check(
     (OUTPUT_DIR / "customer_segments.csv").exists(),
     "Customer segments file was saved"
+)
+check(
+    (OUTPUT_DIR / "b2_customer_features.csv").exists(),
+    "B2 customer features file was saved"
 )
 
 check(
